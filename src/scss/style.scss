@@ -1,0 +1,56 @@
+@import '~normalize.css';
+
+body {
+  padding: 32px;
+}
+
+.expand {
+  margin-bottom: 32px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  &-btn {
+    margin-left: 8px;
+    width: 100px;
+    height: 32px;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+.btn {
+  width: 200px;
+  cursor: pointer;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.container:not(._all-expanded) {
+
+  table {
+    display: none;
+  }
+
+  .btn {
+
+    &._active + table {
+      display: table;
+    }
+  }
+}
+
+td, th {
+  padding: 4px;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+
+
